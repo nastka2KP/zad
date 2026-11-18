@@ -1,0 +1,51 @@
+ <html>  
+<head>  
+<title> 
+ 
+</title> 
+<script language="JavaScript"> 
+function Drabina(d,x) 
+{ 
+d_liczba=parseFloat(d) 
+x_liczba=parseFloat(x) 
+Drabina_wynik=Math.sqrt((d_liczba*d_liczba)+(x_liczba*x_liczba)); 
+document.getElementsByName('obj')[0].value=Drabina_wynik.toFixed(2);    
+alert("Drabina="+Drabina_wynik.toFixed(2)+" m");                                                  
+pokaz1.innerHTML="Drabina="+Drabina_wynik.toFixed(2)+"m <br>";        
+}
+function Alfa(d,x) 
+{ 
+    d_liczba=parseFloat(d) 
+    x_liczba=parseFloat(x) 
+   Drabina_wynik=Math.sqrt((d_liczba*d_liczba)+(x_liczba*x_liczba)); 
+   alfa=Math.asin(d_liczba/Drabina_wynik);
+   Alfa_wynik=alfa*180/Math.PI
+   document.getElementsByName('pole')[0].value=Alfa_wynik.toFixed(2); 
+   alert("Alfa="+Alfa_wynik.toFixed(2)+" stopni"); 
+   pokaz2.innerHTML="Obwód="+Alfa_wynik.toFixed(2)+"stopni"; 
+} 
+       </script> 
+</head>  
+<body>  
+  
+<br> <br> 
+<form name="formularz" action="..." onsubmit="Drabina(this.d.value,this.x.value); 
+Alfa(this.d.value,this.x.value);return false">   
+     Podaj d= 
+        <input  size="6"  name="d"> 
+     Podaj x= 
+        <input  size="6"  name="x"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Pole całości= 
+           <input  size="6"  name="obj"> 
+       Alfa= 
+          <input  size="6"  name="pole"> 
+</form> 
+<table> 
+              <tr id="pokaz1"></tr> 
+              <tr id="pokaz2"></tr> 
+</table> 
+</body>  
+</html>

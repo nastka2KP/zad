@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>   
+<head>    
+<title> proste obliczenia</title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:50px;"> 
+<script language="JavaScript"> 
+var liczba1=prompt("liczba1=",""); 
+var liczba2=prompt("liczba2=","");  
+var x1_voi=parseFloat(liczba1); 
+var x2_voi=parseFloat(liczba2); 
+x1_voi_rad=(Math.PI*x1_voi)/180;
+x2_voi_rad=(Math.PI*x2_voi)/180;
+y1_voi=3*Math.pow(x1_voi,(6/8));
+y2_voi=2*Math.cos(x1_voi_rad)+3*Math.sin(x1_voi_rad);
+y3_voi=Math.pow(Math.pow(x1_voi,5)+2*Math.pow(x2_voi,4),1/3)*Math.abs(x1_voi-x2_voi);
+document.write("x1="+x1_voi+"&nbsp&nbsp&nbsp&nbsp&nbsp x2="+x2_voi+"<br>");  
+document.write("x1_r="+x1_voi_rad.toFixed(2)+"&nbsp&nbsp&nbsp&nbsp&nbsp x2_r="+x2_voi_rad.toFixed(2)+"<br>"); 
+document.write("y1="+y1_voi.toFixed(2)+"<br>"); 
+document.write("y2="+y2_voi.toFixed(2)+"<br>"); 
+document.write("y3="+y3_voi.toFixed(2)+"<br>");
+</script> 
+</div> 
+</body> 
+</html> 

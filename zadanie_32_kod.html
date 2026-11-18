@@ -1,0 +1,106 @@
+
+<html>
+<head>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<title>voit_z30_kod</title>
+</head>
+<body>
+ <textarea cols=100 rows=54>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 32 - Voitiuk</title>
+</head>
+
+<body style="background-color: yellow;">
+    <div style="color: green; font-size: 37px;">
+        <script>
+            function Mebel(rodzaj_v, kolor_v, material_v) {
+                this.rodzaj = rodzaj_v;
+                this.kolor = kolor_v;
+                this.material = material_v;
+            }
+
+            Mebel.prototype.Mebel_wyswietl_voitiuk = function () {
+                alert(
+                    this.rodzaj + " " +
+                    this.kolor + " " +
+                    this.material
+                );
+            };
+
+            Mebel.prototype.cena = 300;
+
+            Mebel.prototype.Mebel_pokaz_voitiuk = function () {
+                alert("Cena: " + this.cena + " zł");
+            };
+
+            const mebel1 = new Mebel("szafa", "brązowy", "drewno");
+            const mebel2 = new Mebel("krzesło", "czarny", "plastik");
+            const mebel3 = new Mebel("ławka", "beżowy", "metal");
+
+            mebel1.Mebel_wyswietl_voitiuk();
+            mebel2.Mebel_wyswietl_voitiuk();
+            mebel3.Mebel_wyswietl_voitiuk();
+
+            mebel1.Mebel_pokaz_voitiuk();
+
+            document.write(
+                "Moje nazwisko to Voitiuk nr 22, a obiekt to Mebel.<br>"
+            );
+            document.write("Dostęp do pól mebel1, mebel2 i mebel3:<br>");
+            document.write("czyli wypisanie danych:<br><br>");
+
+            document.write(
+                "Mebel pierwszy => " +
+                mebel1.rodzaj + " " +
+                mebel1.kolor + " " +
+                mebel1.material + "<br>"
+            );
+
+            document.write(
+                "Mebel drugi => " +
+                mebel2.rodzaj + " " +
+                mebel2.kolor + " " +
+                mebel2.material + "<br>"
+            );
+
+            document.write(
+                "Mebel trzeci => " +
+                mebel3.rodzaj + " " +
+                mebel3.kolor + " " +
+                mebel3.material + "<br>"
+            );
+
+            document.write(
+                "Nowe pole cena => " + mebel1.cena + " zł<br>"
+            );
+        </script>
+    </div>
+
+    <div style="color: blue; font-size: 21px;">
+        <br>
+        Programowanie obiektowe:<br>
+        Obiekt to mebel, pola: rodzaj, kolor, materiał<br>
+        Metoda: Mebel_wyswietl_voitiuk()<br>
+        Nowe pole poza ciałem konstruktora: cena<br>
+        Nowa metoda poza ciałem konstruktora:
+        Mebel_pokaz_voitiuk()<br><br>
+
+        Słowo kluczowe prototype stosowane jest do:<br>
+        definiowania metod i właściwości obiektów oraz dodawania nowych
+        metod lub właściwości do istniejącego prototypu.<br><br>
+
+        Słowo kluczowe new stosowane jest do:<br>
+        utworzenia nowego obiektu na podstawie konstruktora.
+    </div>
+</body>
+</html>
+DS
+</body>
+</html></textarea>
+</body>
+</html>

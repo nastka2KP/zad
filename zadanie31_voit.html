@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 31 – Voitiuk</title>
+</head>
+<body bgcolor="lightblue">
+
+<div style="color:red;font-size:42px;">
+<script type="text/javascript">
+
+var Mebel = {
+    rodzaj: "szafa",
+    kolor: "brazowy",
+    material: "drewno",
+
+    Mebel_wyswietl_voitiuk:function()
+    {
+        document.write("Dane obiektu Mebel<br>");
+        document.write("Moje dane ==> " + this.rodzaj + " " + this.kolor + " " + this.material);
+    }
+}
+
+Mebel.Mebel_wyswietl_voitiuk();
+
+Mebel.cena = 300;
+
+Mebel.Mebel_pokaz_voitiuk = function()
+{
+    alert("Cena: " + this.cena + " zł");
+}
+
+Mebel.Mebel_pokaz_voitiuk();
+
+</script>
+</div>
+
+<br>
+
+<div style="color:blue;font-size:26px;">
+<br>
+Mój numer w dzienniku jest 22 i moje dane to:<br>
+Obiekt to Mebel<br>
+pola:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rodzaj<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kolor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;material<br>
+metoda:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mebel_wyswietl_voitiuk();<br>
+==========================================================================<br>
+nowe pole to cena dla obiektu Mebel wartość pola to 300<br>
+nowa definicja metody to Mebel_pokaz_voitiuk(); z użyciem alert();<br>
+użycie metody Mebel_pokaz_voitiuk();
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+ <html>  
+<head>  
+<title> 
+ 
+</title> 
+<script language="JavaScript"> 
+function Drabina(a,b) 
+{ 
+a_liczba=parseFloat(a) 
+b_liczba=parseFloat(b) 
+Drabina_wynik=a_liczba*b_liczba 
+document.getElementsByName('obj')[0].value=Drabina_wynik.toFixed(2);    
+alert("Pole całści="+Drabina_wynik.toFixed(2)+" cm^3");                                                  
+pokaz1.innerHTML="Pole całości="+Drabina_wynik.toFixed(2)+" cm^3"+"<br>";        
+}
+function O(a,b) 
+{ 
+    a_liczba=parseFloat(a) 
+    b_liczba=parseFloat(b) 
+   O_wynik=a_liczba*2+b_liczba*2
+   document.getElementsByName('pole')[0].value=O_wynik.toFixed(2); 
+   alert("Obwód="+O_wynik.toFixed(2)+" cm^2"); 
+   pokaz2.innerHTML="Obwód="+O_wynik.toFixed(2)+"cm^2"; 
+} 
+       </script> 
+</head>  
+<body>  
+  
+<br> <br> 
+<form name="formularz" action="..." onsubmit="Drabina(this.a.value,this.b.value); 
+O(this.a.value,this.b.value);return false">   
+     Podaj a= 
+        <input  size="6"  name="a"> 
+     Podaj b= 
+        <input  size="6"  name="b"> 
+                       <br>   <br> 
+         <input  TYPE="submit"  Value="oblicz" > 
+                       <br>   <br> 
+       Pole całości= 
+           <input  size="6"  name="obj"> 
+       Obwód= 
+          <input  size="6"  name="pole"> 
+</form> 
+<table> 
+              <tr id="pokaz1"></tr> 
+              <tr id="pokaz2"></tr> 
+</table> 
+</body>  
+</html>

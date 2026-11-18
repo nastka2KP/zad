@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 29</title>
+
+    <script>
+        function okno_zamknij() {
+            window.close();
+        }
+
+    </script>
+</head>
+<body>
+    <ol>
+        <li>
+            <h1>W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?</h1>
+            <p>
+                Właściwość obiektu można określić, wpisując wartość do pola odpowiedzialnego za tę właściwość.<br><br>
+
+                Sposób 1 – zapis z użyciem kropki:<br>
+                <code>auto.marka = "Opel Omega";</code> – przypisuje tekstową wartość właściwości marka.<br>
+                <code>auto.rok = 1996;</code> – przypisuje liczbową wartość właściwości rok.<br><br>
+
+                Sposób 2 – zapis z użyciem nawiasów kwadratowych:<br>
+                <code>auto["cena"] = 25000;</code> – przypisuje wartość właściwości cena.
+            </p>
+        </li>
+
+        <li>
+            <h1>W jaki sposób można odwołać się do pól (właściwości) i metod?</h1>
+            <p>
+                Do pola lub metody odwołujemy się, podając nazwę obiektu, kropkę i nazwę pola albo metody.<br>
+                <code>console.log(samochod1.kolor);</code> – wyświetla właściwość kolor obiektu samochod1.<br>
+                <code>samochod1.jedz();</code> – wywołuje metodę jedz obiektu samochod1.
+            </p>
+        </li>
+
+        <li>
+            <h1>Wymień cechy charakterystyczne konstruktora.</h1>
+            <p>
+                Konstruktor jest wywoływany podczas tworzenia obiektu. Może przyjmować argumenty,
+                które służą do ustawienia właściwości obiektu. W JavaScript funkcja konstruktora
+                zwykle zaczyna się wielką literą. Obiekt tworzony na jej podstawie za pomocą operatora
+                new jest zwracany automatycznie.
+            </p>
+        </li>
+
+        <li>
+            <h1>Konstruowanie obiektu na podstawie przykładu: obiekt ma trzy pola oraz jedną metodę.</h1>
+            <p>Przykład obiektu osoba_1 z trzema polami oraz jedną metodą:</p>
+            <pre><code>var osoba_1 = {
+    nazwisko: "Kowalski",
+    imie: "Jan",
+    zawod: "piekarz",
+    wyswietl: function() {
+        document.write(this.nazwisko + " " + this.imie);
+    }
+};</code></pre>
+        </li>
+
+        <li>
+            <h1>Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h1>
+            <p>
+                Słowo this pozwala odwołać się do pola lub metody bieżącego obiektu,
+                np. <code>this.nazwisko</code>. W obrębie definicji obiektu pola i metody oddzielamy przecinkami.
+            </p>
+        </li>
+
+        <li>
+            <h1>Konstruktor w JS na podstawie przykładu wraz z opisem.</h1>
+            <p>
+                W JavaScript można zdefiniować funkcję konstruktora. Jej parametry są przypisywane
+                do właściwości obiektu za pomocą słowa this:
+            </p>
+            <pre><code>function Osoba(imie, nazwisko, zawod) {
+    this.imie = imie;
+    this.nazwisko = nazwisko;
+    this.zawod = zawod;
+}</code></pre>
+            <p>
+                Funkcja Osoba opisuje właściwości obiektu. Można jej użyć do utworzenia obiektu:
+                <code>var osoba_1 = new Osoba("Jan", "Kowalski", "piekarz");</code>
+            </p>
+        </li>
+
+        <li>
+            <h1>Znaczenie słowa kluczowego New wraz z przykładem.</h1>
+            <p>
+                Operator new tworzy nowy obiekt na podstawie funkcji konstruktora i uruchamia
+                konstruktor dla tego obiektu.<br>
+                Przykład: <code>var osoba_1 = new Osoba("Jan", "Kowalski", "piekarz");</code>
+            </p>
+        </li>
+
+        <li>
+            <h1>Znaczenie słowa kluczowego prototype wraz z przykładem i opisem (szczególnie ważny tekst pogrubiony).</h1>
+            <p>
+                Właściwość prototype pozwala dodać metodę, z której mogą korzystać obiekty utworzone
+                za pomocą danego konstruktora.
+            </p>
+            <p><strong>Metoda dodana do prototype jest dostępna dla obiektów utworzonych przez dany konstruktor.</strong></p>
+            <pre><code>Osoba.prototype.wyswietl = function() {
+    document.write(this.nazwisko + " " + this.imie);
+};
+
+var osoba_1 = new Osoba("Jan", "Kowalski", "piekarz");
+osoba_1.wyswietl();</code></pre>
+            <p>
+                W tym przykładzie metoda wyswietl została dodana do Osoba.prototype.
+                Dlatego obiekt osoba_1 może ją wywołać. Wewnątrz metody this odnosi się
+                do obiektu, który ją uruchamia.
+            </p>
+        </li>
+    </ol>
+
+    <form>
+        <input type="button" value="Zamknij okno" onclick="okno_zamknij()">
+    </form>
+</body>
+</html>

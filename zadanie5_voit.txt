@@ -1,0 +1,40 @@
+<html> 
+     <head> 
+            <title> Malik 2KP - 2</title>
+
+           
+                      <script language="JavaScript"> 
+function WinOpen_Grafika1_Mali()  
+               { 
+window.open("grafika1_Mali.html","okienko_1","toolbar=no,directories=no,menubar=no,height=450,width=320,top=300,left=200"); 
+               }
+function WinOpen_Grafika2_Mali()  
+               { 
+window.open("grafika2_Mali.html","okienko_2","toolbar=no,directories=no,menubar=no,height=450,width=320,top=300,left=530"); 
+               }
+function WinOpen_Grafika3_Mali()  
+               { 
+window.open("grafika3_Mali.html","okienko_3","toolbar=no,directories=no,menubar=no,height=450,width=320,top=300,left=860"); 
+               } 
+function WinOpen_Grafika4_Mali()  
+               { 
+window.open("grafika4_Mali.html","okienko_4","toolbar=no,directories=no,menubar=no,height=450,width=320,top=300,left=1190"); 
+               } 
+
+function okno_zamknij()  
+                       { 
+                             window.close() 
+                       } 
+          </script> 
+      </head> 
+<body> 
+    <p style="color:red;font-size:1.5cm;text-align: center;">Wykonała: Nicola Malik mój numer w dzienniku 12, czyli mam układ [(13) mod 4=1] układ 1 </p>
+   <form style="text-align: center;"> 
+        <input type="button_1" name="grafika1" value="grafika1" onclick="WinOpen_Grafika1_Mali(' ')"> 
+        <input type="button_2" name="grafika2" value="grafika2" onclick="WinOpen_Grafika2_Mali(' ')"> 
+        <input type="button_3" name="grafika3" value="grafika3" onclick="WinOpen_Grafika3_Mali(' ')"> 
+        <input type="button_4" name="grafika4" value="grafika4" onclick="WinOpen_Grafika4_Mali(' ')"> <br>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij()"/> 
+    </form> 
+</body>  
+</html>

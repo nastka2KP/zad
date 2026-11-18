@@ -1,0 +1,44 @@
+
+
+<html>
+<head>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<title>zadanie_25_kod.html</title>
+<html> 
+<textarea cols=91 rows=40>
+
+<!DOCTYPE html>   
+<head>    
+<title> </title>    
+<meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:50px;"> 
+  <script language="JavaScript"> 
+
+      var liczba1 = prompt("N0=", "");
+      var liczba2 = prompt("t=", "");
+      var liczba3 = prompt("T1/2=", "");
+
+      var N0_voi = parseFloat(liczba1);
+      var t_voi = parseFloat(liczba2);
+      var T_1_2_voi = parseFloat(liczba3);
+
+      var lambda = Math.log(2) / T_1_2_voi;
+
+      var N_voi = N0_voi * Math.pow(Math.E, -lambda * t_voi);
+
+  
+      document.write("N0=" + N0_voi.toFixed(2) + "[sztuk]<br>");
+      document.write("t=" + t_voi.toFixed(2) + "[lat]<br>");
+      document.write("T1/2=" + T_1_2_voi.toFixed(2) + "[lat]<br>");
+      document.write("Lambda=" + lambda.toFixed(7) + "[1/rok]<br>");
+      document.write("N=" + N_voi.toFixed(7) + "[sztuk]<br>");
+  </script> 
+</div> 
+</body> 
+</html> 
+
+</html></textarea>
+</body>
+</html>
